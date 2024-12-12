@@ -1,8 +1,7 @@
-import { StyleSheet } from "react-native";
 import { colors, fontFamily } from "@/styles/theme";
-import { isSmallDevice } from "@/utils/dimensions";
+import { customStyleSheet } from "@/styles/custom-style-sheet";
 
-export const styles = StyleSheet.create({
+export const styles = customStyleSheet(({ isSmallDevice }) => ({
   logo: {
     width: 48,
     height: 48,
@@ -20,4 +19,4 @@ export const styles = StyleSheet.create({
     color: colors.gray[500],
     marginTop: isSmallDevice ? 8 : 12,
   },
-});
+}));

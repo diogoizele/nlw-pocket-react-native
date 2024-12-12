@@ -1,9 +1,7 @@
-import { StyleSheet } from "react-native";
-
 import { colors, fontFamily } from "@/styles/theme";
-import { isSmallDevice } from "@/utils/dimensions";
+import { customStyleSheet } from "@/styles/custom-style-sheet";
 
-export const styles = StyleSheet.create({
+export const styles = customStyleSheet(({ isSmallDevice }) => ({
   container: {
     width: "100%",
     flexDirection: "row",
@@ -24,4 +22,4 @@ export const styles = StyleSheet.create({
     fontFamily: fontFamily.regular,
     color: colors.gray[500],
   },
-});
+}));

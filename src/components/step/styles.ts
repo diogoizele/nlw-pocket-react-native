@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 
 import { colors, fontFamily } from "@/styles/theme";
+import { isSmallDevice } from "@/utils/dimensions";
 
 export const styles = StyleSheet.create({
   container: {
@@ -10,10 +11,10 @@ export const styles = StyleSheet.create({
   },
   details: {
     flex: 1,
-    gap: 2,
+    gap: isSmallDevice ? 2 : 4,
   },
   title: {
-    fontSize: 16,
+    fontSize: isSmallDevice ? 15 : 16,
     fontFamily: fontFamily.bold,
     color: colors.gray[500],
     width: "100%",

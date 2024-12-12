@@ -2,8 +2,6 @@ import { Text, View } from "react-native";
 
 import { IconMapPin, IconQrcode, IconTicket } from "@tabler/icons-react-native";
 
-import { categoriesIcons } from "@/utils/categories-icons";
-
 import { styles } from "./styles";
 import { Step } from "../step";
 

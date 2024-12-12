@@ -1,4 +1,5 @@
 import { View, StyleSheet } from "react-native";
+import { router } from "expo-router";
 
 import { isSmallDevice } from "@/utils/dimensions";
 import { Welcome } from "@/components/welcome";
@@ -10,7 +11,9 @@ export default function Index() {
     <View style={styles.container}>
       <Welcome />
       <Steps />
-      <Button title="Continuar" />
+      <Button onPress={() => router.navigate("/home")}>
+        <Button.Title>Começar</Button.Title>
+      </Button>
     </View>
   );
 }

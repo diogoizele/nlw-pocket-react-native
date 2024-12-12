@@ -1,11 +1,10 @@
-import { StyleSheet } from "react-native";
-import { colors } from "@/styles/theme";
+import { customStyleSheet } from "@/styles/custom-style-sheet";
 
-export const styles = StyleSheet.create({
+export const styles = customStyleSheet(({ theme }) => ({
   container: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: colors.gray[100],
+    backgroundColor: theme.colors.gray[100],
   },
-});
+}));

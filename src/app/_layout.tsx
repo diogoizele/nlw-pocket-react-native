@@ -6,10 +6,10 @@ import {
   Rubik_600SemiBold,
   Rubik_700Bold,
 } from "@expo-google-fonts/rubik";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import { colors } from "@/styles/theme";
-
-import Loading from "../components/loading";
+import Loading from "@/components/loading";
 
 export default function Layout() {
   const [loaded] = useFonts({
@@ -24,13 +24,15 @@ export default function Layout() {
   }
 
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false,
-        contentStyle: {
-          backgroundColor: colors.gray[100],
-        },
-      }}
-    />
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Stack
+        screenOptions={{
+          headerShown: false,
+          contentStyle: {
+            backgroundColor: colors.gray[100],
+          },
+        }}
+      />
+    </GestureHandlerRootView>
   );
 }

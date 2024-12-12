@@ -1,7 +1,6 @@
-import { colors, fontFamily } from "@/styles/theme";
 import { customStyleSheet } from "@/styles/custom-style-sheet";
 
-export const styles = customStyleSheet(({ isSmallDevice }) => ({
+export const styles = customStyleSheet(({ isSmallDevice, theme }) => ({
   container: {
     width: "100%",
     flexDirection: "row",
@@ -13,13 +12,13 @@ export const styles = customStyleSheet(({ isSmallDevice }) => ({
   },
   title: {
     fontSize: isSmallDevice ? 15 : 16,
-    fontFamily: fontFamily.bold,
-    color: colors.gray[500],
+    fontFamily: theme.fontFamily.bold,
+    color: theme.colors.gray[500],
     width: "100%",
   },
   description: {
     fontSize: 14,
-    fontFamily: fontFamily.regular,
-    color: colors.gray[500],
+    fontFamily: theme.fontFamily.regular,
+    color: theme.colors.gray[500],
   },
 }));

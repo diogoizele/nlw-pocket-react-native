@@ -1,6 +1,6 @@
 import { customStyleSheet } from "@/styles/custom-style-sheet";
 
-export const styles = customStyleSheet(({ theme }) => ({
+export const styles = customStyleSheet(({ theme, isSmallDevice }) => ({
   container: {
     height: 36,
     backgroundColor: theme.colors.gray[100],
@@ -10,7 +10,6 @@ export const styles = customStyleSheet(({ theme }) => ({
     justifyContent: "center",
     flexDirection: "row",
     paddingHorizontal: 12,
-    gap: 10,
     alignItems: "center",
   },
   name: {
@@ -21,7 +20,7 @@ export const styles = customStyleSheet(({ theme }) => ({
   },
   containerSelected: {
     backgroundColor: theme.colors.green.base,
-    borderWidth: 0,
+    borderColor: theme.colors.green.base,
   },
   nameSelected: {
     color: theme.colors.gray[100],
